@@ -2,12 +2,9 @@ var app = require('http').createServer(handler),
   io = require('socket.io').listen(app),
   fs = require('fs'),
   url = require('url'),
-  SerialPort = require('serialport').SerialPort,
-  // initialize serialport using the /dev/cu.usbmodem1411 serial port
-  // remember to change this string if your arduino is using a different serial port
-  sp = new SerialPort('', {
-    baudRate: 115200
-  }),
+  SerialPort = require('serialport');
+// replace with your serialport here
+   var sp = new SerialPort('93.188.165.221',{baudRate:115200}),
   // this var will contain the message string dispatched by arduino
   arduinoMessage = '',
   /**
