@@ -4,7 +4,7 @@ var app = require('http').createServer(handler),
   url = require('url'),
   SerialPort = require('serialport');
 // replace with your serialport here
-   var sp = new SerialPort('93.188.165.221',{baudRate:115200}),
+   var sp = new SerialPort('SerialPort-goes-here',{baudRate:115200}),
   // this var will contain the message string dispatched by arduino
   arduinoMessage = '',
   /**
